@@ -5,11 +5,11 @@
     <div class="offset-md-3 col-md-6">
        <div class="card">
           <div class="card-header text-center">
-             Modificar película
+             Modificar película  {{$pelicula->id}}
           </div>
           <div class="card-body" style="padding:30px">
 
-             <form action="{{ url('/catalog/create') }}" method="POST">
+             <form action="{{ url('/catalog/edit'. $pelicula->id) }}" method="POST">
                 {{method_field('PUT')}}
                  @csrf
 
